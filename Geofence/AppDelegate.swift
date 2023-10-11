@@ -119,19 +119,21 @@ internal class WoosmapEvent: LocationServiceDelegate, SearchAPIDelegate, Regions
     private func sendNotification(POIregion: Region, didEnter: Bool){
         let content = UNMutableNotificationContent()
         if(didEnter){
-            content.title = "Region enter "
+            content.title = "Region enter: \(POIregion.identifier)"
         }else {
-            content.title = "Region exit "
+            content.title = "Region exit: \(POIregion.identifier)"
         }
-        content.body = "Region = " + POIregion.identifier
+        content.body = ""
         if let moreInfo = POIs.getPOIbyIdStore(idstore: POIregion.identifier){
             content.body += "Name = \(moreInfo.name ?? "-")"
         }
         if(POIregion.type == "circle") {
             if(!didEnter){
-                content.body = "Time spent:\(String(format: "%.0f Seconds", POIregion.spentTime))"
+                content.body += "\nTime spent:\(String(format: "%.0f Seconds", POIregion.spentTime))"
             }
-            content.body += "\n FromPositionDetection = " + String(POIregion.fromPositionDetection)
+            else{
+                content.body += "\nradius: \(POIregion.radius) meters"
+            }
         }
         else {
             content.body += "\n Radius = " + String(POIregion.radius)
