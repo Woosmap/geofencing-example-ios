@@ -39,8 +39,10 @@ class LocationLogViewController: UIViewController {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "LocationLog")
         request.sortDescriptors = [NSSortDescriptor(key:"recordedon" , ascending:false)]
+        request.returnsObjectsAsFaults = false
         do{
             let fetchedResult = try context.fetch(request)
+            
             logList =  fetchedResult as? [LocationLog] ?? []
         }catch let fetchErr {
             debugPrint(fetchErr.localizedDescription)

@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import WoosmapGeofencing
+import CoreData
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var lblGeeofenceRadius: UILabel!
     @IBOutlet weak var lblAppProfile: UILabel!
     @IBOutlet weak var lblAppKey: UILabel!
+    @IBOutlet weak var imgvAvatar: UIImageView!
+    var pulseLayers = [CAShapeLayer]()
+    
     @IBAction func onTapMenu(_ sender: UIBarButtonItem) {
         
         let actionSheetMenu: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -32,8 +37,57 @@ class ViewController: UIViewController {
         actionSheetMenu.addAction(regionLogActionButton)
         self.present(actionSheetMenu, animated: true, completion: nil)
     }
-    @IBOutlet weak var imgvAvatar: UIImageView!
-    var pulseLayers = [CAShapeLayer]()
+    
+    @IBAction func onTapReset(_ sender: Any) {
+        
+        let actionSheetMenu: UIAlertController = UIAlertController(title: "Reset", message: "Do you want to reset SDK Collected data?", preferredStyle: .actionSheet)
+        let yesActionButton = UIAlertAction(title: "Yes", style: .default)
+        { _ in
+            //Clear SDK DB
+            WoosmapGeofenceManager.shared.locationService.removeRegions(type: RegionType.poi)
+            WoosmapGeofenceManager.shared.locationService.removeRegions(type: RegionType.none)
+            WoosmapGeofenceManager.shared.locationService.removeRegions(type: RegionType.custom)
+            POIs.deleteAll()
+            Locations.deleteAll()
+            
+            //Clear app DB
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let requestLocation = NSFetchRequest<NSFetchRequestResult>(entityName: "LocationLog")
+            requestLocation.returnsObjectsAsFaults = false
+            do{
+                let fetchedResult = try context.fetch(requestLocation)
+                for managedObject in fetchedResult {
+                    if let managedObjectData: NSManagedObject = managedObject as? NSManagedObject {
+                        context.delete(managedObjectData)
+                    }
+                }
+            }catch let fetchErr {
+                debugPrint(fetchErr.localizedDescription)
+            }
+            let requestRegion = NSFetchRequest<NSFetchRequestResult>(entityName: "RegionLog")
+            requestRegion.returnsObjectsAsFaults = false
+            do{
+                let fetchedResult = try context.fetch(requestRegion)
+                for managedObject in fetchedResult {
+                    if let managedObjectData: NSManagedObject = managedObject as? NSManagedObject {
+                        context.delete(managedObjectData)
+                    }
+                }
+            }catch let fetchErr {
+                debugPrint(fetchErr.localizedDescription)
+            }
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            exit(0)
+        }
+        actionSheetMenu.addAction(yesActionButton)
+        
+        let noActionButton = UIAlertAction(title: "No", style: .destructive)
+        { _ in
+        }
+        actionSheetMenu.addAction(noActionButton)
+        self.present(actionSheetMenu, animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         lblAppKey.text = setting.WoosmapKey
@@ -52,18 +106,14 @@ class ViewController: UIViewController {
             actionSheetMenu.addAction(saveActionButton)
             self.present(actionSheetMenu, animated: true, completion: nil)
         }
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.onResume),
+                                               name: UIApplication.didBecomeActiveNotification,
+                                               object: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
-        createPulse()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.animatePulse(index:0)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                self.animatePulse(index:1)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                    self.animatePulse(index:2)
-                }
-            }
-        }
+        super.viewWillAppear(animated)
+        viewRadar()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -71,9 +121,35 @@ class ViewController: UIViewController {
             layer.removeFromSuperlayer()
         }
         pulseLayers.removeAll()
+        super.viewDidDisappear(animated)
     }
-    
- 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    @objc func onResume(){
+        pulseLayers.forEach { layer in
+            layer.removeFromSuperlayer()
+        }
+        pulseLayers.removeAll()
+        viewRadar()
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    /// Created Radar view
+    func viewRadar(){
+        createPulse()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.animatePulse(index:0)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                self.animatePulse(index:1)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                    self.animatePulse(index:2)
+                }
+            }
+        }
+    }
+    /// Created pulse effect
     func createPulse() {
         let circularPath = UIBezierPath( arcCenter: .zero, radius: UIScreen.main.bounds.size.width/2, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
         
@@ -88,6 +164,7 @@ class ViewController: UIViewController {
             pulseLayers.append(pulseLayer)
         }
     }
+    /// Animation
     func animatePulse(index: Int){
         if(pulseLayers.indices.contains(index)){
             if self.traitCollection.userInterfaceStyle == .dark {

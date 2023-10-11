@@ -30,6 +30,7 @@ class RegionLogViewController: UIViewController {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "RegionLog")
         request.sortDescriptors = [NSSortDescriptor(key:"recordedon" , ascending:false)]
+        request.returnsObjectsAsFaults = false
         do{
             let fetchedResult = try context.fetch(request)
             logList =  fetchedResult as? [RegionLog] ?? []
