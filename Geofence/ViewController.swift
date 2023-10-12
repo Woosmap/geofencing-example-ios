@@ -77,7 +77,14 @@ class ViewController: UIViewController {
                 debugPrint(fetchErr.localizedDescription)
             }
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            exit(0)
+            let actionSheetClose: UIAlertController = UIAlertController(title: "Restarting", message: "Please Reopen app again", preferredStyle: .alert)
+           
+            let okActionButton = UIAlertAction(title: "OK", style: .destructive)
+            { _ in
+                exit(0)
+            }
+            actionSheetClose.addAction(okActionButton)
+            self.present(actionSheetClose, animated: true, completion: nil)
         }
         actionSheetMenu.addAction(yesActionButton)
         

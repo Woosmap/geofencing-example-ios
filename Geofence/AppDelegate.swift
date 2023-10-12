@@ -72,6 +72,7 @@ internal class WoosmapEvent: LocationServiceDelegate, SearchAPIDelegate, Regions
             newRec.poiname = "Missing Info (Something wrong)"
         }
         newRec.isenter = true
+        newRec.radius = "\(POIregion.radius)"
         newRec.recordedon = Date()
         do {
             try   newRec.managedObjectContext?.save()
@@ -95,6 +96,7 @@ internal class WoosmapEvent: LocationServiceDelegate, SearchAPIDelegate, Regions
             newRec.poiname = "Missing Info (Something wrong)"
         }
         newRec.isenter = false
+        newRec.radius = "\(POIregion.radius)"
         newRec.recordedon = Date()
         do {
             try   newRec.managedObjectContext?.save()

@@ -9,6 +9,7 @@
         <attribute name="isenter" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="poi" optional="YES" attributeType="String"/>
         <attribute name="poiname" optional="YES" attributeType="String"/>
+        <attribute name="radius" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="recordedon" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
 </model>

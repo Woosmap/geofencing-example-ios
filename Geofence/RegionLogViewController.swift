@@ -55,7 +55,7 @@ extension RegionLogViewController: UITableViewDataSource{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d \nHH:mm:ss"
         cell.lblRecordTime.text = dateFormatter.string(from: cellData.recordedon ?? Date())
-        cell.lblRegionInfo.text = "\(cellData.poi ?? ""),\(cellData.poiname ?? "-") \(cellData.isenter ? "Inside":"Outside")"
+        cell.lblRegionInfo.text = "\(cellData.poi ?? ""),\(cellData.poiname ?? "-"), radius:\(cellData.radius ?? "300") \n\(cellData.isenter ? "Entered":"Exited")"
         cell.imgStatus.image = UIImage(systemName: cellData.isenter ? "arrowshape.right": "arrowshape.left")
         
         return cell
