@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F7209E82AD55C71002AFE45 /* LocationLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7209E72AD55C71002AFE45 /* LocationLogViewController.swift */; };
+		5F7209EA2AD55C96002AFE45 /* RegionLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7209E92AD55C96002AFE45 /* RegionLogViewController.swift */; };
+		5F7209ED2AD58771002AFE45 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7209EC2AD58771002AFE45 /* Toast */; };
+		5FCA8F302ACFF2E700745D8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA8F2F2ACFF2E700745D8E /* AppDelegate.swift */; };
+		5FCA8F322ACFF2E700745D8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA8F312ACFF2E700745D8E /* SceneDelegate.swift */; };
+		5FCA8F342ACFF2E700745D8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA8F332ACFF2E700745D8E /* ViewController.swift */; };
+		5FCA8F372ACFF2E700745D8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCA8F352ACFF2E700745D8E /* Main.storyboard */; };
+		5FCA8F3A2ACFF2E700745D8E /* Geofence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA8F382ACFF2E700745D8E /* Geofence.xcdatamodeld */; };
+		5FCA8F3C2ACFF2E800745D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCA8F3B2ACFF2E800745D8E /* Assets.xcassets */; };
+		5FCA8F3F2ACFF2E800745D8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCA8F3D2ACFF2E800745D8E /* LaunchScreen.storyboard */; };
+		5FCA8F482AD03EB800745D8E /* WoosmapGeofencing in Frameworks */ = {isa = PBXBuildFile; productRef = 5FCA8F472AD03EB800745D8E /* WoosmapGeofencing */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5F7209E72AD55C71002AFE45 /* LocationLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLogViewController.swift; sourceTree = "<group>"; };
+		5F7209E92AD55C96002AFE45 /* RegionLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionLogViewController.swift; sourceTree = "<group>"; };
+		5FCA8F2C2ACFF2E700745D8E /* Geofence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geofence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCA8F2F2ACFF2E700745D8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FCA8F312ACFF2E700745D8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5FCA8F332ACFF2E700745D8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5FCA8F362ACFF2E700745D8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FCA8F392ACFF2E700745D8E /* Geofence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Geofence.xcdatamodel; sourceTree = "<group>"; };
+		5FCA8F3B2ACFF2E800745D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FCA8F3E2ACFF2E800745D8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FCA8F402ACFF2E800745D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FCA8F292ACFF2E700745D8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F7209ED2AD58771002AFE45 /* Toast in Frameworks */,
+				5FCA8F482AD03EB800745D8E /* WoosmapGeofencing in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FCA8F232ACFF2E700745D8E = {
+			isa = PBXGroup;
+			children = (
+				5FCA8F2E2ACFF2E700745D8E /* Geofence */,
+				5FCA8F2D2ACFF2E700745D8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FCA8F2D2ACFF2E700745D8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FCA8F2C2ACFF2E700745D8E /* Geofence.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FCA8F2E2ACFF2E700745D8E /* Geofence */ = {
+			isa = PBXGroup;
+			children = (
+				5FCA8F2F2ACFF2E700745D8E /* AppDelegate.swift */,
+				5FCA8F312ACFF2E700745D8E /* SceneDelegate.swift */,
+				5FCA8F332ACFF2E700745D8E /* ViewController.swift */,
+				5FCA8F352ACFF2E700745D8E /* Main.storyboard */,
+				5FCA8F3B2ACFF2E800745D8E /* Assets.xcassets */,
+				5FCA8F3D2ACFF2E800745D8E /* LaunchScreen.storyboard */,
+				5FCA8F402ACFF2E800745D8E /* Info.plist */,
+				5FCA8F382ACFF2E700745D8E /* Geofence.xcdatamodeld */,
+				5F7209E72AD55C71002AFE45 /* LocationLogViewController.swift */,
+				5F7209E92AD55C96002AFE45 /* RegionLogViewController.swift */,
+			);
+			path = Geofence;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FCA8F2B2ACFF2E700745D8E /* Geofence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FCA8F432ACFF2E800745D8E /* Build configuration list for PBXNativeTarget "Geofence" */;
+			buildPhases = (
+				5FCA8F282ACFF2E700745D8E /* Sources */,
+				5FCA8F292ACFF2E700745D8E /* Frameworks */,
+				5FCA8F2A2ACFF2E700745D8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Geofence;
+			packageProductDependencies = (
+				5FCA8F472AD03EB800745D8E /* WoosmapGeofencing */,
+				5F7209EC2AD58771002AFE45 /* Toast */,
+			);
+			productName = Geofence;
+			productReference = 5FCA8F2C2ACFF2E700745D8E /* Geofence.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FCA8F242ACFF2E700745D8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					5FCA8F2B2ACFF2E700745D8E = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 5FCA8F272ACFF2E700745D8E /* Build configuration list for PBXProject "Geofence" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FCA8F232ACFF2E700745D8E;
+			packageReferences = (
+				5FCA8F462AD03EB800745D8E /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */,
+				5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
+			productRefGroup = 5FCA8F2D2ACFF2E700745D8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FCA8F2B2ACFF2E700745D8E /* Geofence */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FCA8F2A2ACFF2E700745D8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCA8F3F2ACFF2E800745D8E /* LaunchScreen.storyboard in Resources */,
+				5FCA8F3C2ACFF2E800745D8E /* Assets.xcassets in Resources */,
+				5FCA8F372ACFF2E700745D8E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FCA8F282ACFF2E700745D8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCA8F342ACFF2E700745D8E /* ViewController.swift in Sources */,
+				5F7209E82AD55C71002AFE45 /* LocationLogViewController.swift in Sources */,
+				5FCA8F3A2ACFF2E700745D8E /* Geofence.xcdatamodeld in Sources */,
+				5F7209EA2AD55C96002AFE45 /* RegionLogViewController.swift in Sources */,
+				5FCA8F302ACFF2E700745D8E /* AppDelegate.swift in Sources */,
+				5FCA8F322ACFF2E700745D8E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5FCA8F352ACFF2E700745D8E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FCA8F362ACFF2E700745D8E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FCA8F3D2ACFF2E800745D8E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FCA8F3E2ACFF2E800745D8E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FCA8F412ACFF2E800745D8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5FCA8F422ACFF2E800745D8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FCA8F442ACFF2E800745D8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 38H4FA3J9J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Geofence/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.woosmap.Geofence;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FCA8F452ACFF2E800745D8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 38H4FA3J9J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Geofence/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.woosmap.Geofence;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FCA8F272ACFF2E700745D8E /* Build configuration list for PBXProject "Geofence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCA8F412ACFF2E800745D8E /* Debug */,
+				5FCA8F422ACFF2E800745D8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FCA8F432ACFF2E800745D8E /* Build configuration list for PBXNativeTarget "Geofence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCA8F442ACFF2E800745D8E /* Debug */,
+				5FCA8F452ACFF2E800745D8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		5FCA8F462AD03EB800745D8E /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Woosmap/geofencing-ios-sdk-spm-release.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F7209EC2AD58771002AFE45 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		5FCA8F472AD03EB800745D8E /* WoosmapGeofencing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FCA8F462AD03EB800745D8E /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */;
+			productName = WoosmapGeofencing;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		5FCA8F382ACFF2E700745D8E /* Geofence.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5FCA8F392ACFF2E700745D8E /* Geofence.xcdatamodel */,
+			);
+			currentVersion = 5FCA8F392ACFF2E700745D8E /* Geofence.xcdatamodel */;
+			path = Geofence.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5FCA8F242ACFF2E700745D8E /* Project object */;
+}
