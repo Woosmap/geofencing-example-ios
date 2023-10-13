@@ -36,7 +36,7 @@ In this repository, a sample code is provided for testing quickly the Geofencing
 
 To run the example, first clone this repository and replace the private key in `AppDelegate.swift` with your own private key. Make sure you have secured your private key.
 
-The sample application has three components. 
+The sample application has following components. 
 
 * List of locations obtained from `LocationServiceDelegate` .
 
