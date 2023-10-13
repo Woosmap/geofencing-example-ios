@@ -50,7 +50,7 @@ internal class WoosmapEvent: LocationServiceDelegate, SearchAPIDelegate, Regions
 
     ///
     ///Search error
-    internal func serachAPIError(error: String) {
+    internal func searchAPIError(error: String) {
 
     }
     ///CAlled ehen geofance region created
