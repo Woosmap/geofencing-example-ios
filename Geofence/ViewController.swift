@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     
     @IBAction func onTapReset(_ sender: Any) {
         
-        let actionSheetMenu: UIAlertController = UIAlertController(title: "Reset", message: "Do you want to reset SDK Collected data?", preferredStyle: .actionSheet)
+        let actionSheetMenu: UIAlertController = UIAlertController(title: "Reset", message: "Do you want to reset SDK Collected data?\n(The application will be terminated if you reset data)", preferredStyle: .actionSheet)
         let yesActionButton = UIAlertAction(title: "Yes", style: .default)
         { _ in
             //Clear SDK DB

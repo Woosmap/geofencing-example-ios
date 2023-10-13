@@ -64,9 +64,9 @@ extension LocationLogViewController: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: CellLocationLog.identifier, for: indexPath) as! CellLocationLog
         let cellData = logList[indexPath.row]
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM d \nHH:mm:ss"
+        dateFormatter.dateFormat = "yy-MM-d HH:mm:ss"
         cell.lblRecordTime.text = dateFormatter.string(from: cellData.recordedon ?? Date())
-        cell.lblLocation.text = "(\(cellData.lat),\(cellData.lng))"
+        cell.lblLocation.text = "(\(String(format: "%.6f",cellData.lat)),\(String(format: "%.6f",cellData.lng)))"
         return cell
     }
 }

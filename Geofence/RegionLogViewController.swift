@@ -53,18 +53,19 @@ extension RegionLogViewController: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: CellRegionLog.identifier, for: indexPath) as! CellRegionLog
         let cellData = logList[indexPath.row]
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM d \nHH:mm:ss"
+        dateFormatter.dateFormat = "yy-MM-d HH:mm:ss"
+        cell.lblPoiName.text = cellData.poiname ?? "-"
         cell.lblRecordTime.text = dateFormatter.string(from: cellData.recordedon ?? Date())
-        cell.lblRegionInfo.text = "\(cellData.poi ?? ""),\(cellData.poiname ?? "-"), radius:\(cellData.radius ?? "300") \n\(cellData.isenter ? "Entered":"Exited")"
+        cell.lblRegionInfo.text = "Radius is \(cellData.radius ?? "300") meters and POI Id is \(cellData.poi ?? "-")"
+        cell.lblEventName.text = cellData.isenter ? "Entered event": "Exited event"
         cell.imgStatus.image = UIImage(systemName: cellData.isenter ? "arrowshape.right": "arrowshape.left")
-        
         return cell
     }
 }
 extension RegionLogViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellData = logList[indexPath.row]
-        UIPasteboard.general.string = "\(cellData.poi ?? ""),\(cellData.poiname ?? "-") \n\(cellData.isenter ? "Inside":"Outside")"
+        UIPasteboard.general.string = "\(cellData.poi ?? ""),\(cellData.poiname ?? "-") \n\(cellData.isenter ? "Entered event":"Exited event")"
         self.view.makeToast("Region copied")
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -74,7 +75,8 @@ internal class CellRegionLog: UITableViewCell {
     @IBOutlet weak var lblRegionInfo: UILabel!
     @IBOutlet weak var lblRecordTime: UILabel!
     @IBOutlet weak var imgStatus: UIImageView!
-    
+    @IBOutlet weak var lblPoiName: UILabel!
+    @IBOutlet weak var lblEventName: UILabel!
     static let identifier: String = "ID_REGION"
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
