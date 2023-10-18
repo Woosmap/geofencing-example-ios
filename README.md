@@ -27,10 +27,10 @@ In the activation email, click on the link to activate your account. Once you ac
 In this repository, a sample code is provided for testing quickly the Geofencing Android SDK. Once this code built, a sample app allows you to monitor Point of Interest (previously loaded in the Woosmap Platform). Before runing the example, each POI has to be created as an asset in the Woosmap Console and the Store Search API must be enabled:
 
 **Create an asset for each POI you want to monitor with a geofence**
-<img width="800" alt="image" src="https://github.com/Woosmap/geofencing-example-android/assets/79836861/8bd43617-e6f4-4fbb-adc3-6bb547c59d6e">
+<img width="800" alt="image" src="./wiki/assets.png">
 
 **Enable Woosmap Store Search API**
-<img width="800" alt="image" src="https://github.com/Woosmap/geofencing-example-android/assets/79836861/6070df46-4e44-44ff-821f-cba28634bc49">
+<img width="800" alt="image" src="./wiki/project.png">
 
 ### Run the sample app
 
