@@ -44,6 +44,4 @@ The sample application has following components.
 
 <img src="/wiki/landingscreen.png"  width="300">
 
-<img src="/wiki/location.png"  width="300">
-
-<img src="/wiki/region.png"  width="300">
+<img src="/wiki/location.png"  width="300"> <img src="/wiki/region.png"  width="300">
