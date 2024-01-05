@@ -13,7 +13,7 @@ import CoreLocation
 class setting {
     static let WoosmapKey: String = "<<private woosmap key>>"
     static let profile: ConfigurationProfile = .passiveTracking
-    static let radius: String = "100"
+    static let radius: String = "300"
 }
 
 ///
@@ -211,12 +211,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         if #available(iOS 14, *) {
-            completionHandler([.banner,.badge])
+            completionHandler([.banner,.badge, .list])
         }
         else{
             completionHandler([.alert,.badge])
         }
-        
     }
     
     // MARK: - Core Data stack
