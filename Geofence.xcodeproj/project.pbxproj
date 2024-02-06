@@ -10,6 +10,12 @@
 		5F7209E82AD55C71002AFE45 /* LocationLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7209E72AD55C71002AFE45 /* LocationLogViewController.swift */; };
 		5F7209EA2AD55C96002AFE45 /* RegionLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7209E92AD55C96002AFE45 /* RegionLogViewController.swift */; };
 		5F7209ED2AD58771002AFE45 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7209EC2AD58771002AFE45 /* Toast */; };
+		5FA270222B6A49AF00CC7179 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FA270212B6A49AF00CC7179 /* GoogleService-Info.plist */; };
+		5FA270252B6A4A6800CC7179 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA270242B6A4A6800CC7179 /* FirebaseAnalytics */; };
+		5FA270272B6A4A6800CC7179 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA270262B6A4A6800CC7179 /* FirebaseAnalyticsOnDeviceConversion */; };
+		5FA270292B6A4A6800CC7179 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA270282B6A4A6800CC7179 /* FirebaseAnalyticsSwift */; };
+		5FA2702B2B6A4A6800CC7179 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA2702A2B6A4A6800CC7179 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		5FA2702D2B6A4A6800CC7179 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA2702C2B6A4A6800CC7179 /* FirebaseAppCheck */; };
 		5FCA8F302ACFF2E700745D8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA8F2F2ACFF2E700745D8E /* AppDelegate.swift */; };
 		5FCA8F322ACFF2E700745D8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA8F312ACFF2E700745D8E /* SceneDelegate.swift */; };
 		5FCA8F342ACFF2E700745D8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA8F332ACFF2E700745D8E /* ViewController.swift */; };
@@ -23,6 +29,7 @@
 /* Begin PBXFileReference section */
 		5F7209E72AD55C71002AFE45 /* LocationLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLogViewController.swift; sourceTree = "<group>"; };
 		5F7209E92AD55C96002AFE45 /* RegionLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionLogViewController.swift; sourceTree = "<group>"; };
+		5FA270212B6A49AF00CC7179 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5FCA8F2C2ACFF2E700745D8E /* Geofence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geofence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCA8F2F2ACFF2E700745D8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FCA8F312ACFF2E700745D8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +47,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F7209ED2AD58771002AFE45 /* Toast in Frameworks */,
+				5FA2702B2B6A4A6800CC7179 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				5FCA8F482AD03EB800745D8E /* WoosmapGeofencing in Frameworks */,
+				5FA270252B6A4A6800CC7179 /* FirebaseAnalytics in Frameworks */,
+				5FA2702D2B6A4A6800CC7179 /* FirebaseAppCheck in Frameworks */,
+				5FA270272B6A4A6800CC7179 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				5FA270292B6A4A6800CC7179 /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +62,7 @@
 		5FCA8F232ACFF2E700745D8E = {
 			isa = PBXGroup;
 			children = (
+				5FA270212B6A49AF00CC7179 /* GoogleService-Info.plist */,
 				5FCA8F2E2ACFF2E700745D8E /* Geofence */,
 				5FCA8F2D2ACFF2E700745D8E /* Products */,
 			);
@@ -90,6 +103,7 @@
 				5FCA8F282ACFF2E700745D8E /* Sources */,
 				5FCA8F292ACFF2E700745D8E /* Frameworks */,
 				5FCA8F2A2ACFF2E700745D8E /* Resources */,
+				5F9019152B71FC59009FBB60 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -99,6 +113,11 @@
 			packageProductDependencies = (
 				5FCA8F472AD03EB800745D8E /* WoosmapGeofencing */,
 				5F7209EC2AD58771002AFE45 /* Toast */,
+				5FA270242B6A4A6800CC7179 /* FirebaseAnalytics */,
+				5FA270262B6A4A6800CC7179 /* FirebaseAnalyticsOnDeviceConversion */,
+				5FA270282B6A4A6800CC7179 /* FirebaseAnalyticsSwift */,
+				5FA2702A2B6A4A6800CC7179 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				5FA2702C2B6A4A6800CC7179 /* FirebaseAppCheck */,
 			);
 			productName = Geofence;
 			productReference = 5FCA8F2C2ACFF2E700745D8E /* Geofence.app */;
@@ -131,6 +150,7 @@
 			packageReferences = (
 				5FCA8F462AD03EB800745D8E /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */,
 				5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				5FA270232B6A4A6800CC7179 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5FCA8F2D2ACFF2E700745D8E /* Products */;
 			projectDirPath = "";
@@ -147,12 +167,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FCA8F3F2ACFF2E800745D8E /* LaunchScreen.storyboard in Resources */,
+				5FA270222B6A49AF00CC7179 /* GoogleService-Info.plist in Resources */,
 				5FCA8F3C2ACFF2E800745D8E /* Assets.xcassets in Resources */,
 				5FCA8F372ACFF2E700745D8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F9019152B71FC59009FBB60 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5FCA8F282ACFF2E700745D8E /* Sources */ = {
@@ -224,7 +271,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -252,6 +299,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -313,6 +361,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -325,7 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 38H4FA3J9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
@@ -360,7 +409,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 38H4FA3J9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
@@ -421,12 +470,20 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		5FA270232B6A4A6800CC7179 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
 		5FCA8F462AD03EB800745D8E /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Woosmap/geofencing-ios-sdk-spm-release.git";
 			requirement = {
 				kind = exactVersion;
-				version = "4.2.6-beta3";
+				version = "4.3.0-beta1";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -436,6 +493,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		5FA270242B6A4A6800CC7179 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA270232B6A4A6800CC7179 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		5FA270262B6A4A6800CC7179 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA270232B6A4A6800CC7179 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		5FA270282B6A4A6800CC7179 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA270232B6A4A6800CC7179 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		5FA2702A2B6A4A6800CC7179 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA270232B6A4A6800CC7179 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		5FA2702C2B6A4A6800CC7179 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA270232B6A4A6800CC7179 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
 		};
 		5FCA8F472AD03EB800745D8E /* WoosmapGeofencing */ = {
 			isa = XCSwiftPackageProductDependency;
