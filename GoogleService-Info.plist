@@ -21,11 +21,11 @@
 	<key>IS_ANALYTICS_ENABLED</key>
 	<true/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<false/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<false/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:536059542892:ios:80b57d5f57e98e60030749</string>
 </dict>
