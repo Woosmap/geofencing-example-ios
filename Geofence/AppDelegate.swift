@@ -9,9 +9,10 @@ import UIKit
 import CoreData
 import WoosmapGeofencing
 import CoreLocation
+import FirebaseCore
 
 class setting {
-    static let WoosmapKey: String = "<<private woosmap key>>"
+    static let WoosmapKey: String = "a440454c-046c-441b-8f87-ac0d207fc298"
     static let profile: ConfigurationProfile = .passiveTracking
     static let radius: String = "300"
 }
@@ -168,6 +169,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //debugPrint(WoosmapGeofenceManager.shared.getDatabaseFileURL()?.absoluteString)
+        FirebaseApp.configure()
         WoosmapGeofenceManager.shared.logLevel = .debug
         WoosmapGeofenceManager.shared.getLocationService().locationServiceDelegate = woosmapDelegate
         WoosmapGeofenceManager.shared.getLocationService().searchAPIDataDelegate = woosmapDelegate
@@ -191,7 +193,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
         }
         application.registerForRemoteNotifications()
-        
         return true
     }
 
