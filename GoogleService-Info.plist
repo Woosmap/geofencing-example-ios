@@ -11,7 +11,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.webgeoservices.woozies</string>
+	<string>com.woosmap.woozies</string>
 	<key>PROJECT_ID</key>
 	<string>woosmap-313214</string>
 	<key>STORAGE_BUCKET</key>
@@ -19,14 +19,14 @@
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<true/>
-	<key>IS_APPINVITE_ENABLED</key>
 	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
 	<false/>
 	<key>IS_SIGNIN_ENABLED</key>
 	<false/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:536059542892:ios:80b57d5f57e98e60030749</string>
+	<string>1:536059542892:ios:40f2bea72c48b11f030749</string>
 </dict>
 </plist>
