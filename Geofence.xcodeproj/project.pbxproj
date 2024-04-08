@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F6093E12BC400FD004D55B2 /* WoosmapGeofencing in Frameworks */ = {isa = PBXBuildFile; productRef = 5F6093E02BC400FD004D55B2 /* WoosmapGeofencing */; };
 		5F7209E82AD55C71002AFE45 /* LocationLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7209E72AD55C71002AFE45 /* LocationLogViewController.swift */; };
 		5F7209EA2AD55C96002AFE45 /* RegionLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7209E92AD55C96002AFE45 /* RegionLogViewController.swift */; };
 		5F7209ED2AD58771002AFE45 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7209EC2AD58771002AFE45 /* Toast */; };
@@ -30,7 +31,6 @@
 		5FCA8F3A2ACFF2E700745D8E /* Geofence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA8F382ACFF2E700745D8E /* Geofence.xcdatamodeld */; };
 		5FCA8F3C2ACFF2E800745D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCA8F3B2ACFF2E800745D8E /* Assets.xcassets */; };
 		5FCA8F3F2ACFF2E800745D8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCA8F3D2ACFF2E800745D8E /* LaunchScreen.storyboard */; };
-		5FCA8F482AD03EB800745D8E /* WoosmapGeofencing in Frameworks */ = {isa = PBXBuildFile; productRef = 5FCA8F472AD03EB800745D8E /* WoosmapGeofencing */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +56,6 @@
 			files = (
 				5F7209ED2AD58771002AFE45 /* Toast in Frameworks */,
 				5F9019562B734B0C009FBB60 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				5FCA8F482AD03EB800745D8E /* WoosmapGeofencing in Frameworks */,
 				5F9019502B734B0C009FBB60 /* FirebaseAnalytics in Frameworks */,
 				5F90195C2B734B0C009FBB60 /* FirebaseAuth in Frameworks */,
 				5F9019662B734B0C009FBB60 /* FirebaseDynamicLinks in Frameworks */,
@@ -65,6 +64,7 @@
 				5F9019622B734B0C009FBB60 /* FirebaseDatabase in Frameworks */,
 				5F9019582B734B0C009FBB60 /* FirebaseAppCheck in Frameworks */,
 				5F9019522B734B0C009FBB60 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				5F6093E12BC400FD004D55B2 /* WoosmapGeofencing in Frameworks */,
 				5F9019542B734B0C009FBB60 /* FirebaseAnalyticsSwift in Frameworks */,
 				5F90195A2B734B0C009FBB60 /* FirebaseAppDistribution-Beta in Frameworks */,
 				5F90195E2B734B0C009FBB60 /* FirebaseAuthCombine-Community in Frameworks */,
@@ -127,7 +127,6 @@
 			);
 			name = Geofence;
 			packageProductDependencies = (
-				5FCA8F472AD03EB800745D8E /* WoosmapGeofencing */,
 				5F7209EC2AD58771002AFE45 /* Toast */,
 				5F90194F2B734B0C009FBB60 /* FirebaseAnalytics */,
 				5F9019512B734B0C009FBB60 /* FirebaseAnalyticsOnDeviceConversion */,
@@ -141,6 +140,7 @@
 				5F9019612B734B0C009FBB60 /* FirebaseDatabase */,
 				5F9019632B734B0C009FBB60 /* FirebaseDatabaseSwift */,
 				5F9019652B734B0C009FBB60 /* FirebaseDynamicLinks */,
+				5F6093E02BC400FD004D55B2 /* WoosmapGeofencing */,
 			);
 			productName = Geofence;
 			productReference = 5FCA8F2C2ACFF2E700745D8E /* Geofence.app */;
@@ -171,9 +171,9 @@
 			);
 			mainGroup = 5FCA8F232ACFF2E700745D8E;
 			packageReferences = (
-				5FCA8F462AD03EB800745D8E /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */,
 				5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				5F90194E2B734B0C009FBB60 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5F6093DF2BC400FD004D55B2 /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */,
 			);
 			productRefGroup = 5FCA8F2D2ACFF2E700745D8E /* Products */;
 			projectDirPath = "";
@@ -398,7 +398,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Geofence/Geofence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 38H4FA3J9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
@@ -418,7 +418,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.4;
+				MARKETING_VERSION = 4.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.woosmap.woozies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -434,7 +434,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Geofence/Geofence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 38H4FA3J9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
@@ -454,7 +454,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.4;
+				MARKETING_VERSION = 4.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.woosmap.woozies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -487,6 +487,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5F6093DF2BC400FD004D55B2 /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Woosmap/geofencing-ios-sdk-spm-release.git";
+			requirement = {
+				kind = exactVersion;
+				version = "4.3.2-beta7";
+			};
+		};
 		5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scalessec/Toast-Swift";
@@ -503,17 +511,14 @@
 				minimumVersion = 10.21.0;
 			};
 		};
-		5FCA8F462AD03EB800745D8E /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Woosmap/geofencing-ios-sdk-spm-release.git";
-			requirement = {
-				kind = exactVersion;
-				version = "4.3.2-beta1";
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5F6093E02BC400FD004D55B2 /* WoosmapGeofencing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F6093DF2BC400FD004D55B2 /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */;
+			productName = WoosmapGeofencing;
+		};
 		5F7209EC2AD58771002AFE45 /* Toast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
@@ -578,11 +583,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F90194E2B734B0C009FBB60 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDynamicLinks;
-		};
-		5FCA8F472AD03EB800745D8E /* WoosmapGeofencing */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5FCA8F462AD03EB800745D8E /* XCRemoteSwiftPackageReference "geofencing-ios-sdk-spm-release" */;
-			productName = WoosmapGeofencing;
 		};
 /* End XCSwiftPackageProductDependency section */
 
