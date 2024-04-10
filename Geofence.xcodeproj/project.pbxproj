@@ -402,7 +402,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Geofence/Geofence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 38H4FA3J9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
@@ -438,7 +438,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Geofence/Geofence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 38H4FA3J9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
@@ -496,7 +496,7 @@
 			repositoryURL = "https://github.com/Woosmap/geofencing-ios-sdk-spm-release.git";
 			requirement = {
 				kind = exactVersion;
-				version = "4.3.2-beta9";
+				version = "4.3.2-beta10";
 			};
 		};
 		5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
