@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F6093E12BC400FD004D55B2 /* WoosmapGeofencing in Frameworks */ = {isa = PBXBuildFile; productRef = 5F6093E02BC400FD004D55B2 /* WoosmapGeofencing */; };
+		5F6093E32BC65EE7004D55B2 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5F6093E22BC52A17004D55B2 /* PrivacyInfo.xcprivacy */; };
 		5F7209E82AD55C71002AFE45 /* LocationLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7209E72AD55C71002AFE45 /* LocationLogViewController.swift */; };
 		5F7209EA2AD55C96002AFE45 /* RegionLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7209E92AD55C96002AFE45 /* RegionLogViewController.swift */; };
 		5F7209ED2AD58771002AFE45 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7209EC2AD58771002AFE45 /* Toast */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F6093E22BC52A17004D55B2 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		5F7209E72AD55C71002AFE45 /* LocationLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLogViewController.swift; sourceTree = "<group>"; };
 		5F7209E92AD55C96002AFE45 /* RegionLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionLogViewController.swift; sourceTree = "<group>"; };
 		5FA270212B6A49AF00CC7179 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		5FCA8F232ACFF2E700745D8E = {
 			isa = PBXGroup;
 			children = (
+				5F6093E22BC52A17004D55B2 /* PrivacyInfo.xcprivacy */,
 				5FA270212B6A49AF00CC7179 /* GoogleService-Info.plist */,
 				5FCA8F2E2ACFF2E700745D8E /* Geofence */,
 				5FCA8F2D2ACFF2E700745D8E /* Products */,
@@ -192,6 +195,7 @@
 				5FCA8F3F2ACFF2E800745D8E /* LaunchScreen.storyboard in Resources */,
 				5FA270222B6A49AF00CC7179 /* GoogleService-Info.plist in Resources */,
 				5FCA8F3C2ACFF2E800745D8E /* Assets.xcassets in Resources */,
+				5F6093E32BC65EE7004D55B2 /* PrivacyInfo.xcprivacy in Resources */,
 				5FCA8F372ACFF2E700745D8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +402,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Geofence/Geofence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 38H4FA3J9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
@@ -434,7 +438,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Geofence/Geofence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 38H4FA3J9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
@@ -492,7 +496,7 @@
 			repositoryURL = "https://github.com/Woosmap/geofencing-ios-sdk-spm-release.git";
 			requirement = {
 				kind = exactVersion;
-				version = "4.3.2-beta7";
+				version = "4.3.2-beta9";
 			};
 		};
 		5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {

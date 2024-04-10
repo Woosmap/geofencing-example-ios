@@ -17,6 +17,7 @@ class LocationLogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
+        rightButton()
     }
     ///
     ///Add Notification
@@ -28,6 +29,7 @@ class LocationLogViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
     }
+    
     ///
     ///Remove view from screen
     @IBAction func onTapBack(_ sender: UIBarButtonItem) {
@@ -93,3 +95,138 @@ internal class CellLocationLog: UITableViewCell {
     }
     
 }
+//TODO: For testing - Start
+extension LocationLogViewController {
+    func rightButton(){
+        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "arrowshape.down.circle"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.shareDatabase(_:)))
+        self.navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    
+    @objc func shareDatabase(_ sender: UIButton) {
+        sender.isHidden = true
+        let relPath = ("~/Library/Application Support/Woosmap.sqlite" as NSString).expandingTildeInPath
+        let fileManager = FileManager.default
+        let zipName: String = "woozieApp.zip"
+        if fileManager.fileExists(atPath: relPath) {
+            
+            do {
+                //Delete perviously saved file
+                let lastSaved = ("~/Documents/\(zipName)" as NSString).expandingTildeInPath
+                if fileManager.fileExists(atPath: lastSaved) {
+                    try fileManager.removeItem(atPath: lastSaved)
+                }
+                
+                let sourceURL = URL(fileURLWithPath: ("~/Library/Application Support" as NSString).expandingTildeInPath)
+                let destURL = URL(fileURLWithPath:  ("~/Documents/\(zipName)" as NSString).expandingTildeInPath)
+                let outcome = try sourceURL.zip(toFileAt: destURL)
+                
+                // Create the Array which includes the files you want to share
+                var filesToShare = [Any]()
+                
+                // Add the path of the file to the Array
+                filesToShare.append(outcome)
+                
+                // Make the activityViewContoller which shows the share-view
+                let activityViewController = UIActivityViewController(activityItems: filesToShare, applicationActivities: nil)
+                
+                // Show the share-view
+                self.present(activityViewController, animated: true){
+                    // nothing
+                }
+                
+                sender.isHidden = false
+            } catch {
+                debugPrint("sampleapp: Failed to read database")
+                sender.isHidden = false
+            }
+        }
+        else{
+            debugPrint("sampleapp: No Database found")
+            sender.isHidden = false
+        }
+        
+    }
+}
+
+internal extension URL {
+    
+    /// Creates a zip archive of the file or folder represented by this URL and returns a references to the zipped file
+    ///
+    /// - parameter dest: the destination URL; if nil, the destination will be this URL with ".zip" appended
+    func zip(toFileAt dest: URL? = nil) throws -> URL
+    {
+        let destURL = dest ?? self.appendingPathExtension("zip")
+        
+        let fm = FileManager.default
+        var isDir: ObjCBool = false
+        
+        let srcDir: URL
+        let srcDirIsTemporary: Bool
+        if self.isFileURL && fm.fileExists(atPath: path, isDirectory: &isDir) && isDir.boolValue == true {
+            // this URL is a directory: just zip it in-place
+            srcDir = self
+            srcDirIsTemporary = false
+        }
+        else {
+            // otherwise we need to copy the simple file to a temporary directory in order for
+            // NSFileCoordinatorReadingOptions.ForUploading to actually zip it up
+            srcDir = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(UUID().uuidString)
+            try fm.createDirectory(at: srcDir, withIntermediateDirectories: true, attributes: nil)
+            let tmpURL = srcDir.appendingPathComponent(self.lastPathComponent)
+            try fm.copyItem(at: self, to: tmpURL)
+            srcDirIsTemporary = true
+        }
+        
+        let coord = NSFileCoordinator()
+        var readError: NSError?
+        var copyError: NSError?
+        var errorToThrow: NSError?
+        
+        var readSucceeded:Bool = false
+        // coordinateReadingItemAtURL is invoked synchronously, but the passed in zippedURL is only valid
+        // for the duration of the block, so it needs to be copied out
+        coord.coordinate(readingItemAt: srcDir,
+                         options: NSFileCoordinator.ReadingOptions.forUploading,
+                         error: &readError)
+        {
+            (zippedURL: URL) -> Void in
+            readSucceeded = true
+            // assert: read succeeded
+            do {
+                try fm.copyItem(at: zippedURL, to: destURL)
+            } catch let caughtCopyError {
+                copyError = caughtCopyError as NSError
+            }
+        }
+        
+        if let theReadError = readError, !readSucceeded {
+            // assert: read failed, readError describes our reading error
+            debugPrint("sampleapp: zipping failed")
+            errorToThrow =  theReadError
+        }
+        else if readError == nil && !readSucceeded  {
+            debugPrint("sampleapp: NSFileCoordinator has violated its API contract. It has errored without throwing an error object")
+            errorToThrow = NSError.init(domain: Bundle.main.bundleIdentifier!, code: 0, userInfo: nil)
+        }
+        else if let theCopyError = copyError {
+            // assert: read succeeded, copy failed
+            debugPrint("sampleapp: zipping succeeded but copying the zip file failed")
+            errorToThrow = theCopyError
+        }
+        
+        if srcDirIsTemporary {
+            do {
+                try fm.removeItem(at: srcDir)
+            }
+            catch {
+                // Not going to throw, because we do have a valid output to return. We're going to rely on
+                // the operating system to eventually cleanup the temporary directory.
+                debugPrint("sampleapp: Warning. Zipping succeeded but could not remove temporary directory afterwards")
+            }
+        }
+        if let error = errorToThrow { throw error }
+        return destURL
+    }
+}
+//TODO: For testing - End
