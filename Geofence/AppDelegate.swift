@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 import WoosmapGeofencing
 import CoreLocation
-import FirebaseCore
+//import FirebaseCore
 
 class setting {
     static let WoosmapKey: String = "a440454c-046c-441b-8f87-ac0d207fc298"
@@ -169,7 +169,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //debugPrint(WoosmapGeofenceManager.shared.getDatabaseFileURL()?.absoluteString)
-        FirebaseApp.configure()
+        //FirebaseApp.configure()
         WoosmapGeofenceManager.shared.logLevel = .debug
         WoosmapGeofenceManager.shared.getLocationService().locationServiceDelegate = woosmapDelegate
         WoosmapGeofenceManager.shared.getLocationService().searchAPIDataDelegate = woosmapDelegate
@@ -208,6 +208,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    func applicationWillTerminate(_ application: UIApplication) {
+        debugPrint("sampleapp: applicationWillTerminate")
+        // Set Refreshing Position Hight frequency state
+        WoosmapGeofenceManager.shared.setModeHighfrequencyLocation(enable: false)
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        WoosmapGeofenceManager.shared.didBecomeActive()
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
