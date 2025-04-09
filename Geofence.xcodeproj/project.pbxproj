@@ -338,11 +338,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Geofence/Geofence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
-				DEVELOPMENT_TEAM = 38H4FA3J9J;
+				CURRENT_PROJECT_VERSION = 32;
+				DEVELOPMENT_TEAM = FZAYF37SJF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Woozies;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Consume by WoosmapGeofance SDK";
@@ -359,8 +360,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.woosmap.woozies;
+				MARKETING_VERSION = 4.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.woosmap.app.woozies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -375,11 +376,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Geofence/Geofence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
-				DEVELOPMENT_TEAM = 38H4FA3J9J;
+				CURRENT_PROJECT_VERSION = 32;
+				DEVELOPMENT_TEAM = FZAYF37SJF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geofence/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Woozies;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Consume by WoosmapGeofance SDK";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Consume by WoosmapGeofance SDK";
@@ -396,8 +398,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.woosmap.woozies;
+				MARKETING_VERSION = 4.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.woosmap.app.woozies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -434,7 +436,7 @@
 			repositoryURL = "https://github.com/Woosmap/geofencing-ios-sdk-spm-release.git";
 			requirement = {
 				kind = exactVersion;
-				version = "4.3.7-beta5";
+				version = "4.3.8-beta2";
 			};
 		};
 		5F7209EB2AD58771002AFE45 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
