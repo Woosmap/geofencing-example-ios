@@ -14,7 +14,7 @@ import CoreLocation
 class setting {
     static let WoosmapKey: String = "a440454c-046c-441b-8f87-ac0d207fc298"
     static let profile: ConfigurationProfile = .passiveTracking
-    static let radius: String = "300"
+    static let radius: String = "150"
 }
 
 ///
