@@ -35,6 +35,11 @@ class ViewController: UIViewController {
             }
         }
         actionSheetMenu.addAction(regionLogActionButton)
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            // Optional: handle cancel tap, or leave empty
+        }
+        actionSheetMenu.addAction(cancelActionButton)
+        
         self.present(actionSheetMenu, animated: true, completion: nil)
     }
     
